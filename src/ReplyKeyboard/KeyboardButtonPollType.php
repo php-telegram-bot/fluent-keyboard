@@ -31,6 +31,7 @@ class KeyboardButtonPollType implements \JsonSerializable
         ]);
     }
 
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return $this->data;

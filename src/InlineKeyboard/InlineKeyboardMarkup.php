@@ -19,6 +19,20 @@ class InlineKeyboardMarkup extends FluentEntity
     public function row(array $row = [])
     {
         $this->data['inline_keyboard'][] = $row;
+
+        return $this;
+    }
+
+    public function button(InlineKeyboardButton $button)
+    {
+        $count = count($this->data['inline_keyboard']);
+        if (count($this->data['inline_keyboard']) === 0) {
+            $this->data['inline_keyboard'][] = [];
+            $count++;
+        }
+
+        $this->data['inline_keyboard'][$count - 1][] = $button;
+
         return $this;
     }
 

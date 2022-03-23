@@ -21,4 +21,15 @@ class InlineKeyboardButton extends FluentEntity
         'pay' => true,
     ];
 
+    public static function make(string $text = null)
+    {
+        $data = [];
+
+        if ($text) {
+            $data['text'] = $text;
+        }
+
+        return new static($data);
+    }
+
 }

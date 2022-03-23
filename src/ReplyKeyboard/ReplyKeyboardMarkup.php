@@ -31,6 +31,20 @@ class ReplyKeyboardMarkup extends FluentEntity
     public function row(array $row = [])
     {
         $this->data['keyboard'][] = $row;
+
+        return $this;
+    }
+
+    public function button(KeyboardButton $button)
+    {
+        $count = count($this->data['keyboard']);
+        if ($count === 0) {
+            $this->data['keyboard'][] = [];
+            $count++;
+        }
+
+        $this->data['keyboard'][$count - 1][] = $button;
+
         return $this;
     }
 

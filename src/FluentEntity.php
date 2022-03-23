@@ -11,6 +11,11 @@ abstract class FluentEntity implements \JsonSerializable
 
     protected $defaults = [];
 
+    public function __construct(array $data = [])
+    {
+        $this->data = $data + $this->data;
+    }
+
     public static function make()
     {
         return new static;
@@ -25,6 +30,7 @@ abstract class FluentEntity implements \JsonSerializable
         return $this;
     }
 
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return $this->data;
