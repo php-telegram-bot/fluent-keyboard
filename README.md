@@ -20,8 +20,8 @@
                     <li><a href="#by-button">By Button</a></li>
                 </ol>
             </li>
-            <li><a href="#force-reply-and-reply-keyboard-remove">ForceReply and ReplyKeyboardRemove</a></li>
-            <li><a href="#keyboard-button-poll-type">KeyboardButtonPollType</a></li>
+            <li><a href="#forcereply-and-replykeyboardremove">ForceReply and ReplyKeyboardRemove</a></li>
+            <li><a href="#keyboardbuttonpolltype">KeyboardButtonPollType</a></li>
         </ol>
     </li>
   </ol>
