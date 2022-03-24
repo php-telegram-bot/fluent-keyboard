@@ -157,6 +157,8 @@ InlineKeyboardMarkup::make()
 It's up to you if you define your buttons inline like in these examples or you'd like to generate a whole row before and
 pass the variable to the `row()` method.
 
+**You can mix and match the `row()` and `button()` methods.**
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### ForceReply and ReplyKeyboardRemove
