@@ -91,7 +91,7 @@ As a shortcut, you can pass the mandatory `text` field as an argument of the sta
 
 ```php
 KeyboardButton::make('Text of Button')
-    ->requestContact();
+    ->requestLocation();
 ```
 
 This is done the same way for `InlineKeyboardButton`:
