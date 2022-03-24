@@ -24,8 +24,8 @@
 |
 */
 
-expect()->extend('toBeJsonSerializable', function () {
-    return $this->jsonSerialize()->toBeArray();
+expect()->extend('toMatchEntity', function ($array) {
+    return expect(json_encode($this->value))->json()->toMatchArray($array);
 });
 
 /*
@@ -39,7 +39,7 @@ expect()->extend('toBeJsonSerializable', function () {
 |
 */
 
-function something()
-{
-    // ..
-}
+//function something()
+//{
+//    // ..
+//}

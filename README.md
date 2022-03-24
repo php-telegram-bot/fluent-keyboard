@@ -163,7 +163,7 @@ pass the variable to the `row()` method.
 
 ### ForceReply and ReplyKeyboardRemove
 
-ForceReply and ReplyKeyboardRemove can be used the same way as a normal keyboard, but the do not receive any buttons:
+ForceReply and ReplyKeyboardRemove can be used the same way as a normal keyboard, but they do not receive any buttons:
 
 ```php
 $this->replyToUser('Thank you', [

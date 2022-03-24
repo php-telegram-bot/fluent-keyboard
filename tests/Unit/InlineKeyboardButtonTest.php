@@ -4,9 +4,8 @@ use PhpTelegramBot\FluentKeyboard\InlineKeyboard\InlineKeyboardButton;
 
 it('creates valid JSON', function () {
     $button = InlineKeyboardButton::make();
-    $json = json_encode($button);
 
-    expect($json)->json()->toMatchArray([
+    expect($button)->toMatchEntity([
 
     ]);
 });
@@ -21,9 +20,8 @@ it('can set known fields', function () {
         ->switchInlineQueryCurrentChat('Switch Inline Query Current Chat')
         ->callbackGame('Callback Game')
         ->pay();
-    $json = json_encode($button);
 
-    expect($json)->json()->toMatchArray([
+    expect($button)->toMatchEntity([
         'text'                             => 'Text',
         'url'                              => 'http://example.com',
         'login_url'                        => [],
@@ -37,9 +35,8 @@ it('can set known fields', function () {
 
 it('can set text via make', function () {
     $button = InlineKeyboardButton::make('Test');
-    $json = json_encode($button);
 
-    expect($json)->json()->toMatchArray([
+    expect($button)->toMatchEntity([
         'text' => 'Test',
     ]);
 });
@@ -47,9 +44,8 @@ it('can set text via make', function () {
 it('can set unknown fields', function () {
     $button = InlineKeyboardButton::make()
         ->unknownField('unknown');
-    $json = json_encode($button);
 
-    expect($json)->json()->toMatchArray([
+    expect($button)->toMatchEntity([
         'unknown_field' => 'unknown',
     ]);
 });

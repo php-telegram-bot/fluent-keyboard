@@ -3,21 +3,19 @@
 use PhpTelegramBot\FluentKeyboard\ReplyKeyboard\KeyboardButton;
 
 it('creates valid JSON', function () {
-    $keyboard = KeyboardButton::make();
-    $json = json_encode($keyboard);
+    $button = KeyboardButton::make();
 
-    expect($json)->json()->toMatchArray([]);
+    expect($button)->toMatchEntity([]);
 });
 
 it('can set known fields', function () {
-    $keyboard = KeyboardButton::make()
+    $button = KeyboardButton::make()
         ->text('Text')
         ->requestContact()
         ->requestLocation()
         ->requestPoll();
-    $json = json_encode($keyboard);
 
-    expect($json)->json()->toMatchArray([
+    expect($button)->toMatchEntity([
         'text'             => 'Text',
         'request_contact'  => true,
         'request_location' => true,
@@ -27,19 +25,17 @@ it('can set known fields', function () {
 
 it('can set text via make', function () {
     $button = KeyboardButton::make('Text');
-    $json = json_encode($button);
 
-    expect($json)->json()->toMatchArray([
+    expect($button)->toMatchEntity([
         'text' => 'Text',
     ]);
 });
 
 it('can set unknown fields', function () {
-    $keyboard = KeyboardButton::make()
+    $button = KeyboardButton::make()
         ->unknownField('Test');
-    $json = json_encode($keyboard);
 
-    expect($json)->json()->toMatchArray([
+    expect($button)->toMatchEntity([
         'unknown_field' => 'Test',
     ]);
 });
