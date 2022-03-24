@@ -20,11 +20,11 @@
         }
     },
     "require": {
-        "php": "^7.3|^8.0",
-        "ext-json": "*"
+        "php": "^7.3|^8.0"
     },
     "require-dev": {
-        "pestphp/pest": "^1.21"
+        "pestphp/pest": "^1.21",
+        "ext-json": "*"
     },
     "scripts": {
         "test": [
