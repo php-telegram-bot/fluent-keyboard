@@ -58,7 +58,7 @@ A ReplyKeyboardMarkup is created by calling the static `make()` method on `Reply
 like `one_time_keyboard`, can be chained by calling it in camelCase. Buttons can be added by calling
 the `button()` method. We have a detailed look on that later.
 
-The classes and fields are named after the corresponding type and fields of
+The classes and fields are named after the corresponding types and fields of
 the [Telegram Bot API](https://core.telegram.org/bots/api).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -177,7 +177,7 @@ $data['reply_markup'] = ForceReply::make()->inputFieldPlaceholder('Please type s
 
 ### KeyboardButtonPollType
 
-The request_poll field is a little special. You can specify which poll type the user can create by passing
+The `request_poll` field is a little special. You can specify which poll type the user can create by passing
 a `KeyboardButtonPollType` object.
 
 ```php
