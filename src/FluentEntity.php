@@ -33,7 +33,7 @@ abstract class FluentEntity implements \JsonSerializable
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-        return $this->data;
+        return (object) $this->data;
     }
 
     private function getDefault($key)

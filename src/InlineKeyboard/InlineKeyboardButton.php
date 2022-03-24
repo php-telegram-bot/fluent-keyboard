@@ -3,7 +3,6 @@
 namespace PhpTelegramBot\FluentKeyboard\InlineKeyboard;
 
 use PhpTelegramBot\FluentKeyboard\Button;
-use PhpTelegramBot\FluentKeyboard\FluentEntity;
 
 /**
  * @method self text(string $text)

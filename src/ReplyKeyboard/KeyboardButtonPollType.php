@@ -4,15 +4,13 @@ namespace PhpTelegramBot\FluentKeyboard\ReplyKeyboard;
 
 use PhpTelegramBot\FluentKeyboard\Button;
 
+/**
+ * @method $this type(string $type)
+ */
 class KeyboardButtonPollType extends Button
 {
 
     protected $data = [];
-
-    public function __construct(array $data = [])
-    {
-        $this->data = $data;
-    }
 
     public static function any()
     {
@@ -31,12 +29,6 @@ class KeyboardButtonPollType extends Button
         return new static([
             'type' => 'regular'
         ]);
-    }
-
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
-    {
-        return $this->data;
     }
 
 }
