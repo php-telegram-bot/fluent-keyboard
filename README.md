@@ -99,7 +99,7 @@ This is done the same way for `InlineKeyboardButton`:
 
 ```php
 InlineKeyboardButton::make('Login')
-    ->loginUrl('https://example.com');
+    ->loginUrl(['url' => 'https://example.com']);
 ```
 
 To find out which fields are available have a look at the [Bot API documentation](https://core.telegram.org/bots/api).
