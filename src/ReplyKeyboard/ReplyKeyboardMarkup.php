@@ -14,13 +14,12 @@ use PhpTelegramBot\FluentKeyboard\KeyboardMarkup;
 class ReplyKeyboardMarkup extends KeyboardMarkup
 {
 
-    protected static $keyboardFieldName = 'keyboard';
+    protected static string $keyboardFieldName = 'keyboard';
 
-    protected $defaults = [
+    protected array $defaults = [
         'resize_keyboard'   => true,
         'one_time_keyboard' => true,
         'selective'         => true,
     ];
-
 
 }

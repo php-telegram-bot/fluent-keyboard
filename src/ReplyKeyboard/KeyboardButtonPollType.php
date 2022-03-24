@@ -10,7 +10,7 @@ use PhpTelegramBot\FluentKeyboard\Button;
 class KeyboardButtonPollType extends Button
 {
 
-    protected $data = [];
+    protected array $data = [];
 
     public static function any(): static
     {

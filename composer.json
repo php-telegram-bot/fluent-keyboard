@@ -27,9 +27,7 @@
         "ext-json": "*"
     },
     "scripts": {
-        "test": [
-            "vendor/bin/pest"
-        ]
+        "test": "vendor/bin/pest"
     },
     "config": {
         "allow-plugins": {

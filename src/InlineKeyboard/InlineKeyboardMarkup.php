@@ -8,6 +8,6 @@ use PhpTelegramBot\FluentKeyboard\KeyboardMarkup;
 class InlineKeyboardMarkup extends KeyboardMarkup
 {
 
-    protected static $keyboardFieldName = 'inline_keyboard';
+    protected static string $keyboardFieldName = 'inline_keyboard';
 
 }

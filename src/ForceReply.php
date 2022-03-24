@@ -9,11 +9,11 @@ namespace PhpTelegramBot\FluentKeyboard;
 class ForceReply extends FluentEntity
 {
 
-    protected $data = [
+    protected array $data = [
         'force_reply' => true,
     ];
 
-    protected $defaults = [
+    protected array $defaults = [
         'selective' => true,
     ];
 

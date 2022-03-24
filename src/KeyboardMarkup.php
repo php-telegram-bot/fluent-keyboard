@@ -10,9 +10,9 @@ abstract class KeyboardMarkup extends FluentEntity
      *
      * @var string
      */
-    protected static $keyboardFieldName = 'keyboard';
+    protected static string $keyboardFieldName = 'keyboard';
 
-    protected $currentRowIndex = 0;
+    protected int $currentRowIndex = 0;
 
     public function __construct(array $data = [])
     {
@@ -32,13 +32,13 @@ abstract class KeyboardMarkup extends FluentEntity
     {
         $keyboard = &$this->data[static::$keyboardFieldName];
 
-        // Last row is not empty
+        // Last row is not empty, add new row
         if (! empty($keyboard[$this->currentRowIndex])) {
             $keyboard[] = [];
             $this->currentRowIndex++;
         }
 
-        // argument is not empty
+        // Buttons have been passed, add them
         if (! empty($buttons)) {
             $keyboard[$this->currentRowIndex] = $buttons;
             $this->currentRowIndex++;
@@ -48,14 +48,13 @@ abstract class KeyboardMarkup extends FluentEntity
     }
 
     /**
-     * Adds buttons one per row to the keyboard.
+     * Adds buttons to the keyboard, one per row.
      *
      * @param  Button[]  $buttons
      * @return $this
      */
     public function stack(array $buttons): self
     {
-        // Every button gets its own row
         foreach ($buttons as $button) {
             $this->row([$button]);
         }

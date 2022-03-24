@@ -8,11 +8,11 @@ namespace PhpTelegramBot\FluentKeyboard;
 class ReplyKeyboardRemove extends FluentEntity
 {
 
-    protected $data = [
+    protected array $data = [
         'remove_keyboard' => true,
     ];
 
-    protected $defaults = [
+    protected array $defaults = [
         'selective' => true,
     ];
 

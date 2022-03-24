@@ -16,7 +16,7 @@ use PhpTelegramBot\FluentKeyboard\Button;
 class InlineKeyboardButton extends Button
 {
 
-    protected $defaults = [
+    protected array $defaults = [
         'pay' => true,
     ];
 
@@ -24,7 +24,7 @@ class InlineKeyboardButton extends Button
     {
         $data = [];
 
-        if ($text) {
+	    if ($text !== null) {
             $data['text'] = $text;
         }
 
@@ -33,7 +33,7 @@ class InlineKeyboardButton extends Button
 
     public function loginUrl(array|string $login_url): self
     {
-        if (! is_array($login_url)) {
+        if (is_string($login_url)) {
             $login_url = [
                 'url' => $login_url
             ];

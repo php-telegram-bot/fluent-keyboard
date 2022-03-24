@@ -70,7 +70,7 @@ the [Telegram Bot API](https://core.telegram.org/bots/api).
 You can create a keyboard by calling the static `make()` method on its class.
 
 After that you can chain methods to set additional fields that are available in the Bot API. This is done by calling the
-field name in camelCase. So instead of input_field_placeholder, you need to call `inputFieldPlaceholder()`.
+field name in camelCase. So instead of `input_field_placeholder`, you need to call `inputFieldPlaceholder()`.
 
 ```php
 ReplyKeyboardMarkup::make()
@@ -85,14 +85,14 @@ The Buttons are created in the same way:
 
 ```php
 KeyboardButton::make()
-    ->text('Text of Button')
+    ->text('Send my Contact')
     ->requestContact();
 ```
 
 As a shortcut, you can pass the mandatory `text` field as an argument to the static method `make()` like this:
 
 ```php
-KeyboardButton::make('Text of Button')
+KeyboardButton::make('Send my Location')
     ->requestLocation();
 ```
 
@@ -169,9 +169,7 @@ If you want to add a bunch of buttons that have each a row for themselves you ca
 ```php
 InlineKeyboardMarkup::make()
     ->stack([
-        InlineKeyboardButton::make('Login')->loginUrl([
-            'url' => 'https://example.com/login'
-        ]),
+        InlineKeyboardButton::make('Login')->loginUrl('https://example.com/login'),
         InlineKeyboardButton::make('Visit Homepage')->url('https://example.com')
     ]);
 ```

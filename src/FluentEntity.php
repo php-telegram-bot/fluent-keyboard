@@ -4,12 +4,10 @@ namespace PhpTelegramBot\FluentKeyboard;
 
 abstract class FluentEntity implements \JsonSerializable
 {
-    /**
-     * @var array $data
-     */
-    protected $data = [];
 
-    protected $defaults = [];
+    protected array $data = [];
+
+    protected array $defaults = [];
 
     public function __construct(array $data = [])
     {
@@ -30,7 +28,7 @@ abstract class FluentEntity implements \JsonSerializable
         return $this;
     }
 
-    public function jsonSerialize(): mixed
+    public function jsonSerialize(): object
     {
         return (object) $this->data;
     }

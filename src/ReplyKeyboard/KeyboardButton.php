@@ -12,7 +12,8 @@ use PhpTelegramBot\FluentKeyboard\Button;
  */
 class KeyboardButton extends Button
 {
-    protected $defaults = [
+
+    protected array $defaults = [
         'request_contact'  => true,
         'request_location' => true,
         'request_poll'     => [],
@@ -22,7 +23,7 @@ class KeyboardButton extends Button
     {
         $data = [];
 
-        if ($text) {
+        if ($text !== null) {
             $data['text'] = $text;
         }
 
