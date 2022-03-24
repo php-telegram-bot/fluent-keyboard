@@ -25,7 +25,7 @@ abstract class KeyboardMarkup extends FluentEntity
     /**
      * Adds a new row to the keyboard.
      *
-     * @param  array  $buttons
+     * @param  Button[]  $buttons
      * @return $this
      */
     public function row(array $buttons = [])
@@ -50,7 +50,7 @@ abstract class KeyboardMarkup extends FluentEntity
     /**
      * Adds buttons one per row to the keyboard.
      *
-     * @param  array  $buttons
+     * @param  Button[]  $buttons
      * @return $this
      */
     public function stack(array $buttons)
@@ -66,10 +66,10 @@ abstract class KeyboardMarkup extends FluentEntity
     /**
      * Adds a button to the last row.
      *
-     * @param  \JsonSerializable  $button
+     * @param  Button  $button
      * @return $this
      */
-    public function button(\JsonSerializable $button)
+    public function button(Button $button)
     {
         $keyboard = &$this->data[static::$keyboardFieldName];
 

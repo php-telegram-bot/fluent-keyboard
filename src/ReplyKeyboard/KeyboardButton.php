@@ -2,7 +2,7 @@
 
 namespace PhpTelegramBot\FluentKeyboard\ReplyKeyboard;
 
-use PhpTelegramBot\FluentKeyboard\FluentEntity;
+use PhpTelegramBot\FluentKeyboard\Button;
 
 /**
  * @method self text(string $text)
@@ -10,7 +10,7 @@ use PhpTelegramBot\FluentKeyboard\FluentEntity;
  * @method self requestLocation(bool $request_location = true)
  * @method self requestPoll(KeyboardButtonPollType|array $request_poll = [])
  */
-class KeyboardButton extends FluentEntity
+class KeyboardButton extends Button
 {
     protected $defaults = [
         'request_contact'  => true,

@@ -2,6 +2,7 @@
 
 namespace PhpTelegramBot\FluentKeyboard\InlineKeyboard;
 
+use PhpTelegramBot\FluentKeyboard\Button;
 use PhpTelegramBot\FluentKeyboard\FluentEntity;
 
 /**
@@ -14,7 +15,7 @@ use PhpTelegramBot\FluentKeyboard\FluentEntity;
  * @method self callbackGame(string $callback_game)
  * @method self pay(bool $pay = true)
  */
-class InlineKeyboardButton extends FluentEntity
+class InlineKeyboardButton extends Button
 {
 
     protected $defaults = [

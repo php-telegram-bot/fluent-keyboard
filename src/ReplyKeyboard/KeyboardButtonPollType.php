@@ -2,7 +2,9 @@
 
 namespace PhpTelegramBot\FluentKeyboard\ReplyKeyboard;
 
-class KeyboardButtonPollType implements \JsonSerializable
+use PhpTelegramBot\FluentKeyboard\Button;
+
+class KeyboardButtonPollType extends Button
 {
 
     protected $data = [];
