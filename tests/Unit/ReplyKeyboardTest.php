@@ -40,7 +40,7 @@ it('can set unknown fields', function () {
     ]);
 });
 
-it('can has multiple buttons', function () {
+it('can have multiple buttons', function () {
     $keyboard = ReplyKeyboardMarkup::make()
         ->button(KeyboardButton::make()->text('Button A'))
         ->button(KeyboardButton::make()->text('Button B'))
@@ -62,7 +62,7 @@ it('can has multiple buttons', function () {
     ]);
 });
 
-it('can has multiple rows', function () {
+it('can have multiple rows', function () {
     $keyboard = ReplyKeyboardMarkup::make()
         ->row([
             KeyboardButton::make()->text('Button A'),

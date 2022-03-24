@@ -22,7 +22,7 @@ it('can set unknown fields', function () {
     ]);
 });
 
-it('can has multiple buttons', function () {
+it('can have multiple buttons', function () {
     $keyboard = InlineKeyboardMarkup::make()
         ->button(InlineKeyboardButton::make()->text('Button A'))
         ->button(InlineKeyboardButton::make()->text('Button B'))
@@ -44,7 +44,7 @@ it('can has multiple buttons', function () {
     ]);
 });
 
-it('can has multiple rows', function () {
+it('can have multiple rows', function () {
     $keyboard = InlineKeyboardMarkup::make()
         ->row([
             InlineKeyboardButton::make()->text('Button A'),
