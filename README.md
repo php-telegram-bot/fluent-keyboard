@@ -163,7 +163,7 @@ pass the variable to the `row()` method.
 
 #### As Stack
 
-If you want to add a bunch of buttons that have a row for themselves you can use the `stack()` method.
+If you want to add a bunch of buttons that have each a row for themselves you can use the `stack()` method.
 
 ```php
 InlineKeyboardMarkup::make()
