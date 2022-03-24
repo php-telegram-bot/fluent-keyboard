@@ -18,6 +18,7 @@
                 <ol>
                     <li><a href="#by-row">By Row</a></li>
                     <li><a href="#by-button">By Button</a></li>
+                    <li><a href="#as-stack">As Stack</a></li>
                 </ol>
             </li>
             <li><a href="#forcereply-and-replykeyboardremove">ForceReply and ReplyKeyboardRemove</a></li>
@@ -135,6 +136,8 @@ InlineKeyboardMarkup::make()
     ]);
 ```
 
+![InlineKeyboard with multiple rows](./docs/images/inlinekeyboard-multiple-rows.png)
+
 #### By Button
 
 ```php
@@ -153,11 +156,28 @@ InlineKeyboardMarkup::make()
     ->button(InlineKeyboardButton::make('C')->callbackData('answer-c'))
     ->button(InlineKeyboardButton::make('D')->callbackData('answer-d'));
 ```
+![InlineKeyboard with multiline buttons](./docs/images/inlinekeyboards-multiline-buttons.png)
 
 It's up to you if you define your buttons inline like in these examples or you'd like to generate a whole row before and
 pass the variable to the `row()` method.
 
-**You can mix and match the `row()` and `button()` methods.**
+#### As Stack
+
+If you want to add a bunch of buttons that have a row for themselves you can use the `stack()` method.
+
+```php
+InlineKeyboardMarkup::make()
+    ->stack([
+        InlineKeyboardButton::make('Login')->loginUrl([
+            'url' => 'https://example.com/login'
+        ]),
+        InlineKeyboardButton::make('Visit Homepage')->url('https://example.com')
+    ]);
+```
+
+![InlineKeyboard with stack](./docs/images/inlinekeyboard-stack.png)
+
+**You can mix and match the `row()`, `stack()` and `button()` methods as it fits your needs.**
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
