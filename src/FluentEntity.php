@@ -16,12 +16,12 @@ abstract class FluentEntity implements \JsonSerializable
         $this->data = $data + $this->data;
     }
 
-    public static function make()
+    public static function make(): static
     {
         return new static;
     }
 
-    public function __call($name, $arguments)
+    public function __call($name, $arguments): self
     {
         $key = snake_case($name);
 
@@ -30,13 +30,12 @@ abstract class FluentEntity implements \JsonSerializable
         return $this;
     }
 
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return (object) $this->data;
     }
 
-    private function getDefault($key)
+    private function getDefault($key): mixed
     {
         return $this->defaults[$key] ?? null;
     }

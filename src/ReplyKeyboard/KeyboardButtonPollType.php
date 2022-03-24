@@ -12,19 +12,19 @@ class KeyboardButtonPollType extends Button
 
     protected $data = [];
 
-    public static function any()
+    public static function any(): static
     {
         return new static();
     }
 
-    public static function quiz()
+    public static function quiz(): static
     {
         return new static([
             'type' => 'quiz'
         ]);
     }
 
-    public static function regular()
+    public static function regular(): static
     {
         return new static([
             'type' => 'regular'

@@ -18,7 +18,7 @@ class KeyboardButton extends Button
         'request_poll'     => [],
     ];
 
-    public static function make(string $text = null)
+    public static function make(string $text = null): static
     {
         $data = [];
 

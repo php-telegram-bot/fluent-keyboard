@@ -28,7 +28,7 @@ abstract class KeyboardMarkup extends FluentEntity
      * @param  Button[]  $buttons
      * @return $this
      */
-    public function row(array $buttons = [])
+    public function row(array $buttons = []): self
     {
         $keyboard = &$this->data[static::$keyboardFieldName];
 
@@ -53,7 +53,7 @@ abstract class KeyboardMarkup extends FluentEntity
      * @param  Button[]  $buttons
      * @return $this
      */
-    public function stack(array $buttons)
+    public function stack(array $buttons): self
     {
         // Every button gets its own row
         foreach ($buttons as $button) {
@@ -69,7 +69,7 @@ abstract class KeyboardMarkup extends FluentEntity
      * @param  Button  $button
      * @return $this
      */
-    public function button(Button $button)
+    public function button(Button $button): self
     {
         $keyboard = &$this->data[static::$keyboardFieldName];
 

@@ -7,7 +7,6 @@ use PhpTelegramBot\FluentKeyboard\Button;
 /**
  * @method self text(string $text)
  * @method self url(string $url)
- * @method self loginUrl(array $login_url)
  * @method self callbackData(string $callback_data)
  * @method self switchInlineQuery(string $switch_inline_query)
  * @method self switchInlineQueryCurrentChat(string $switch_inline_query_current_chat)
@@ -21,7 +20,7 @@ class InlineKeyboardButton extends Button
         'pay' => true,
     ];
 
-    public static function make(string $text = null)
+    public static function make(string $text = null): static
     {
         $data = [];
 
@@ -30,6 +29,19 @@ class InlineKeyboardButton extends Button
         }
 
         return new static($data);
+    }
+
+    public function loginUrl(array|string $login_url): self
+    {
+        if (! is_array($login_url)) {
+            $login_url = [
+                'url' => $login_url
+            ];
+        }
+
+        $this->data['login_url'] = $login_url;
+
+        return $this;
     }
 
 }
