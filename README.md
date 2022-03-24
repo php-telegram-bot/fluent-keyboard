@@ -158,7 +158,7 @@ InlineKeyboardMarkup::make()
 ```
 ![InlineKeyboard with multiline buttons](./docs/images/inlinekeyboards-multiline-buttons.png)
 
-It's up to you if you define your buttons inline like in these examples or you'd like to generate a whole row before and
+It's up to you if you define your buttons inline like in these examples or if you'd like to generate a whole row beforehand and
 pass the variable to the `row()` method.
 
 #### As Stack
