@@ -54,9 +54,9 @@ Request::sendMessage([
 ]);
 ```
 
-A ReplyKeyboardMarkup is created by calling the static make method on `ReplyKeyboardMarkup` after that every field,
-like `one_time_keyboard` you want to set can be chained by calling it in camelCase. Buttons can be added by calling
-the `button` method. We have a detailed look on that later.
+A ReplyKeyboardMarkup is created by calling the static `make()` method on `ReplyKeyboardMarkup`. After that every field,
+like `one_time_keyboard`, can be chained by calling it in camelCase. Buttons can be added by calling
+the `button()` method. We have a detailed look on that later.
 
 The classes and fields are named after the corresponding type and fields of
 the [Telegram Bot API](https://core.telegram.org/bots/api).
