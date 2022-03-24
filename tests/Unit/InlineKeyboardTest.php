@@ -25,7 +25,10 @@ it('can set unknown fields', function () {
 it('can has multiple buttons', function () {
     $keyboard = InlineKeyboardMarkup::make()
         ->button(InlineKeyboardButton::make()->text('Button A'))
-        ->button(InlineKeyboardButton::make()->text('Button B'));
+        ->button(InlineKeyboardButton::make()->text('Button B'))
+        ->row()
+        ->button(InlineKeyboardButton::make()->text('Button C'))
+        ->button(InlineKeyboardButton::make()->text('Button D'));
     $json = json_encode($keyboard);
 
     expect($json)->json()->toMatchArray([
@@ -33,6 +36,9 @@ it('can has multiple buttons', function () {
             [
                 ['text' => 'Button A'],
                 ['text' => 'Button B'],
+            ], [
+                ['text' => 'Button C'],
+                ['text' => 'Button D'],
             ]
         ]
     ]);
