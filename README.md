@@ -88,7 +88,7 @@ KeyboardButton::make()
     ->requestContact();
 ```
 
-As a shortcut, you can pass the mandatory `text` field as an argument of the static `make()` method like this:
+As a shortcut, you can pass the mandatory `text` field as an argument to the static method `make()` like this:
 
 ```php
 KeyboardButton::make('Text of Button')
