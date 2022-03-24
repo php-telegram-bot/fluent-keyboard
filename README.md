@@ -97,8 +97,8 @@ KeyboardButton::make('Text of Button')
 This is done the same way for `InlineKeyboardButton`:
 
 ```php
-InlineKeyboardButton::make('Button Text')
-    ->callbackData('button-1');
+InlineKeyboardButton::make('Login')
+    ->loginUrl('https://example.com');
 ```
 
 To find out which fields are available have a look at the [Bot API documentation](https://core.telegram.org/bots/api).
