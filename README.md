@@ -1,9 +1,9 @@
 <div id="top"></div>
 
-![Version][version]
+[![Version][version]](https://packagist.org/packages/php-telegram-bot/fluent-keyboard)
 ![PHP Version][php-version]
-![Bot API][bot-api-shield]
-![Tests][tests-shield]
+[![Bot API][bot-api-shield]](https://core.telegram.org/bots/api#january-31-2022)
+[![Tests][tests-shield]](https://github.com/php-telegram-bot/fluent-keyboard/actions/workflows/tests.yaml)
 
 
 <!-- TABLE OF CONTENTS -->
