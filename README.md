@@ -1,8 +1,10 @@
 <div id="top"></div>
 
+![Version][version]
 ![PHP Version][php-version]
 ![Bot API][bot-api-shield]
 ![Tests][tests-shield]
+
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -220,3 +222,5 @@ $pollButton = new KeyboardButtonPollType([
 [bot-api-shield]: https://img.shields.io/badge/Bot%20API-5.7%20(Jan%202022)-%232a9ed6?style=for-the-badge
 
 [php-version]: https://img.shields.io/packagist/php-v/php-telegram-bot/fluent-keyboard?style=for-the-badge
+
+[version]: https://img.shields.io/packagist/v/php-telegram-bot/fluent-keyboard?color=orange&label=Version&style=for-the-badge
