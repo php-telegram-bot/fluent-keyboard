@@ -24,11 +24,24 @@ class InlineKeyboardButton extends Button
     {
         $data = [];
 
-	    if ($text !== null) {
+        if ($text !== null) {
             $data['text'] = $text;
         }
 
         return new static($data);
+    }
+
+    public function webApp(array|string $web_app): self
+    {
+        if (is_string($web_app)) {
+            $web_app = [
+                'url' => $web_app,
+            ];
+        }
+
+        $this->data['web_app'] = $web_app;
+
+        return $this;
     }
 
     public function loginUrl(array|string $login_url): self

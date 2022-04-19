@@ -29,4 +29,17 @@ class KeyboardButton extends Button
 
         return new static($data);
     }
+
+    public function webApp(array|string $web_app): self
+    {
+        if (is_string($web_app)) {
+            $web_app = [
+                'url' => $web_app,
+            ];
+        }
+
+        $this->data['web_app'] = $web_app;
+
+        return $this;
+    }
 }
